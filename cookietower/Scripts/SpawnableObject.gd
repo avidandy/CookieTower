@@ -22,3 +22,4 @@ func dropObj():
 	print("Drop")
 	justSpawned = false	
 	self.set_freeze_enabled(false)
+	GameMessenger.disconnect("objReleased", dropObj)
