@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ceqm1iwt7x2d0"
-path="res://.godot/imported/blue_body_rhombus.png-c0616d366ece6c057fc062a7c73e2f20.ctex"
+uid="uid://hu1tgxhahqbs"
+path="res://.godot/imported/pink_body_rhombus.png-81d4ba4b2399610264bbb350e5d84bee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://blue_body_rhombus.png"
-dest_files=["res://.godot/imported/blue_body_rhombus.png-c0616d366ece6c057fc062a7c73e2f20.ctex"]
+source_file="res://pink_body_rhombus.png"
+dest_files=["res://.godot/imported/pink_body_rhombus.png-81d4ba4b2399610264bbb350e5d84bee.ctex"]
 
 [params]
 
