@@ -13,7 +13,6 @@ config_version=5
 config/name="CookieTower"
 run/main_scene="uid://d11cihdp5hxl0"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
 
 [autoload]
 

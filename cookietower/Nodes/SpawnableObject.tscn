@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://nbm02a5shql6"]
 
 [ext_resource type="Script" uid="uid://c57ykom5opn3u" path="res://Scripts/SpawnableObject.gd" id="1_6rf6c"]
-[ext_resource type="Texture2D" uid="uid://fy8fgwa53biw" path="res://icon.svg" id="2_3j58s"]
+[ext_resource type="Texture2D" uid="uid://cpr2nf74wllhx" path="res://green_body_square.png" id="2_6rf6c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c6brt"]
 size = Vector2(127, 127)
@@ -14,4 +14,4 @@ position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_c6brt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_3j58s")
+texture = ExtResource("2_6rf6c")
