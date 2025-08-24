@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcaw277v3xjro"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5pih"]
+size = Vector2(1158, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7hld2"]
+size = Vector2(20, 842.5)
+
+[node name="PlayArea" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Bottom" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(576, 648)
+shape = SubResource("RectangleShape2D_a5pih")
+
+[node name="Left" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 235)
+shape = SubResource("RectangleShape2D_7hld2")
+
+[node name="Right" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1152, 235)
+shape = SubResource("RectangleShape2D_7hld2")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.61339, 0.61339, 0.61339, 1)

@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckf7gaq62nyif"]
+[gd_scene load_steps=3 format=3 uid="uid://n517npkn5rfr"]
 
 [ext_resource type="Script" uid="uid://db80sdupkxr62" path="res://Scripts/Manager.gd" id="1_lwdiy"]
+[ext_resource type="PackedScene" uid="uid://dcaw277v3xjro" path="res://Scenes/play_area.tscn" id="2_rx8lu"]
 
 [node name="Andytestroom" type="Node2D"]
 script = ExtResource("1_lwdiy")
+
+[node name="PlayArea" parent="." instance=ExtResource("2_rx8lu")]
