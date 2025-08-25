@@ -20,6 +20,10 @@ GameMessenger="*res://Scripts/GameMessenger.gd"
 AudioController="*res://Scripts/AudioController.gd"
 ScoreController="*res://Scripts/ScoreController.gd"
 
+[global_group]
+
+bonding=""
+
 [input]
 
 leftclick={

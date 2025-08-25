@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=3 uid="uid://n517npkn5rfr"]
+
+[ext_resource type="Script" uid="uid://db80sdupkxr62" path="res://Scripts/Manager.gd" id="1_lwdiy"]
+[ext_resource type="PackedScene" uid="uid://dcaw277v3xjro" path="res://Scenes/play_area.tscn" id="2_rx8lu"]
+[ext_resource type="Script" uid="uid://c3vd7ued5m38n" path="res://Scripts/NextUpController.gd" id="3_7ouqv"]
+[ext_resource type="PackedScene" uid="uid://cat5kt4c6jmdx" path="res://Shapes/Circle.res" id="4_n1hye"]
+[ext_resource type="PackedScene" uid="uid://dtsqd12rn6mwu" path="res://Shapes/Rhombus.res" id="5_g86mj"]
+[ext_resource type="PackedScene" uid="uid://dbifv3giu5n7u" path="res://Shapes/Square.res" id="6_kxwsv"]
+[ext_resource type="PackedScene" uid="uid://d2dnin00i3ndo" path="res://Shapes/Squircle.res" id="7_uelgi"]
+
+[node name="Andytestroom" type="Node2D" node_paths=PackedStringArray("nextUp")]
+script = ExtResource("1_lwdiy")
+nextUp = NodePath("NextUpUI")
+
+[node name="PlayArea" parent="." instance=ExtResource("2_rx8lu")]
+
+[node name="NextUpUI" type="Node2D" parent="." node_paths=PackedStringArray("nextUp01", "nextUp02", "nextUp03")]
+position = Vector2(907, 102)
+script = ExtResource("3_7ouqv")
+targets = Array[PackedScene]([ExtResource("4_n1hye"), ExtResource("6_kxwsv"), ExtResource("5_g86mj"), ExtResource("7_uelgi")])
+nextUp01 = NodePath("Sprite2D1")
+nextUp02 = NodePath("Sprite2D2")
+nextUp03 = NodePath("Sprite2D3")
+
+[node name="Sprite2D3" type="Sprite2D" parent="NextUpUI"]
+position = Vector2(50, 0)
+scale = Vector2(0.8, 0.8)
+
+[node name="Sprite2D2" type="Sprite2D" parent="NextUpUI"]
+position = Vector2(25, 0)
+scale = Vector2(0.9, 0.9)
+
+[node name="Sprite2D1" type="Sprite2D" parent="NextUpUI"]

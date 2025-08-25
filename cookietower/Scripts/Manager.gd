@@ -7,7 +7,17 @@ var objPos = null
 @export var nextUp : Node2D
 	
 func _ready() -> void:
-	pass
+	GameMessenger.connect("bondingCollision", bonding)
+
+func bonding():
+#	print(get_tree().get_nodes_in_group("bonding"))	
+	if GameMessenger.obj1.get_position().y > GameMessenger.obj2.get_position().y:
+		GameMessenger.obj1.queue_free()
+		print("obj 1 is higher and should be deleted")
+	else:
+		GameMessenger.obj2.queue_free()
+		print("obj 2 is higher and should be deleted")
+
 	
 func _input(event):
 	
