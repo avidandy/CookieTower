@@ -1,0 +1,145 @@
+[gd_scene load_steps=2 format=3 uid="uid://yqw3m1p10eil"]
+
+[ext_resource type="PackedScene" uid="uid://cs25nfa26uoun" path="res://Scenes/next_up.tscn" id="1_gek4i"]
+
+[node name="GameUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.99797, 0.880454, 0.820635, 1)
+
+[node name="InfoArea" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 300.0
+offset_bottom = 648.0
+
+[node name="Background" type="ColorRect" parent="InfoArea"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.74558, 0.74558, 0.74558, 1)
+
+[node name="ScoreArea" type="Control" parent="InfoArea"]
+anchors_preset = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 250.0
+offset_bottom = 325.0
+
+[node name="ColorRect" type="ColorRect" parent="InfoArea/ScoreArea"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.473976, 0.473976, 0.473976, 1)
+
+[node name="CurrentScore" type="Label" parent="InfoArea/ScoreArea"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -54.0
+offset_top = 164.0
+offset_right = 53.0
+offset_bottom = 187.0
+grow_horizontal = 2
+text = "Current Score"
+
+[node name="HighScore" type="Label" parent="InfoArea/ScoreArea"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -41.5
+offset_right = 41.5
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "High Score"
+
+[node name="NextUpArea" type="Control" parent="InfoArea"]
+anchors_preset = 0
+offset_left = 50.0
+offset_top = 350.0
+offset_right = 250.0
+offset_bottom = 625.0
+
+[node name="Background" type="ColorRect" parent="InfoArea/NextUpArea"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -200.0
+offset_right = 100.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.000113828, 0.000113828, 0.000113828, 0.690196)
+
+[node name="Label" type="Label" parent="InfoArea/NextUpArea"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.0
+offset_top = 25.0
+offset_right = 31.0
+offset_bottom = 48.0
+grow_horizontal = 2
+text = "Next Up"
+
+[node name="NextUp" parent="InfoArea/NextUpArea" instance=ExtResource("1_gek4i")]
+position = Vector2(90, 190)
+
+[node name="RulesArea" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 852.0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Background" type="ColorRect" parent="RulesArea"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.544974, 0.544974, 0.544974, 1)
+
+[node name="Label" type="Label" parent="RulesArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.0
+offset_top = -89.5
+offset_right = 86.0
+offset_bottom = 89.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Here is a massive box
+that displays the rules
+
+Maybe there could be
+some other stuff here
+
+"

@@ -1,27 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://d11cihdp5hxl0"]
+[gd_scene load_steps=2 format=3 uid="uid://d11cihdp5hxl0"]
 
-[ext_resource type="Script" uid="uid://c3vd7ued5m38n" path="res://Scripts/NextUpController.gd" id="1_jjgbg"]
-[ext_resource type="PackedScene" uid="uid://cat5kt4c6jmdx" path="res://Shapes/Circle.res" id="2_kry3j"]
-[ext_resource type="PackedScene" uid="uid://w8qudk4gys81" path="res://Shapes/Rhombus.res" id="3_21xkr"]
-[ext_resource type="PackedScene" uid="uid://bnkx3o24t2h8e" path="res://Shapes/Square.res" id="4_6bp64"]
-[ext_resource type="PackedScene" uid="uid://d16wmmfyskcga" path="res://Shapes/Squircle.res" id="5_344ge"]
+[ext_resource type="PackedScene" uid="uid://yqw3m1p10eil" path="res://Scenes/game_ui.tscn" id="6_21xkr"]
 
 [node name="Main" type="Node2D"]
 
-[node name="Node" type="Node2D" parent="." node_paths=PackedStringArray("nextUp01", "nextUp02", "nextUp03")]
-position = Vector2(622, 322)
-script = ExtResource("1_jjgbg")
-targets = Array[PackedScene]([ExtResource("2_kry3j"), ExtResource("3_21xkr"), ExtResource("4_6bp64"), ExtResource("5_344ge")])
-nextUp01 = NodePath("Sprite2D1")
-nextUp02 = NodePath("Sprite2D2")
-nextUp03 = NodePath("Sprite2D3")
-
-[node name="Sprite2D3" type="Sprite2D" parent="Node"]
-position = Vector2(50, 0)
-scale = Vector2(0.8, 0.8)
-
-[node name="Sprite2D2" type="Sprite2D" parent="Node"]
-position = Vector2(25, 0)
-scale = Vector2(0.9, 0.9)
-
-[node name="Sprite2D1" type="Sprite2D" parent="Node"]
+[node name="GameUI" parent="." instance=ExtResource("6_21xkr")]

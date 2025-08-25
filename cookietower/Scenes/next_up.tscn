@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://cs25nfa26uoun"]
+
+[ext_resource type="Script" uid="uid://c3vd7ued5m38n" path="res://Scripts/NextUpController.gd" id="2_xdw8d"]
+[ext_resource type="PackedScene" uid="uid://cat5kt4c6jmdx" path="res://Shapes/Circle.res" id="3_gd1v2"]
+[ext_resource type="PackedScene" uid="uid://dtsqd12rn6mwu" path="res://Shapes/Rhombus.res" id="4_hkle4"]
+[ext_resource type="PackedScene" uid="uid://dbifv3giu5n7u" path="res://Shapes/Square.res" id="5_5npw0"]
+[ext_resource type="PackedScene" uid="uid://d2dnin00i3ndo" path="res://Shapes/Squircle.res" id="6_x5q75"]
+
+[node name="NextUp" type="Node2D" node_paths=PackedStringArray("nextUp01", "nextUp02", "nextUp03")]
+script = ExtResource("2_xdw8d")
+targets = Array[PackedScene]([ExtResource("3_gd1v2"), ExtResource("4_hkle4"), ExtResource("5_5npw0"), ExtResource("6_x5q75")])
+nextUp01 = NodePath("Sprite2D1")
+nextUp02 = NodePath("Sprite2D2")
+nextUp03 = NodePath("Sprite2D3")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(50, -50)
+scale = Vector2(0.8, 0.8)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(25, -25)
+scale = Vector2(0.9, 0.9)
+
+[node name="Sprite2D1" type="Sprite2D" parent="."]
