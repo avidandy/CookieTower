@@ -24,15 +24,14 @@ func takeNextShape() -> PackedScene:
 	return next
 	
 func updatePreview() -> void:
-	nextUp01.texture = (nextUp[0].instantiate() as Sprite2D).texture
+	var nu01 = nextUp[0].instantiate()
+	nextUp01.texture = (nu01.get_node("Shape2D") as Sprite2D).texture
 	nextUp01.cancel_free()
 	
-	nextUp02.texture = (nextUp[1].instantiate() as Sprite2D).texture
+	var nu02 = nextUp[1].instantiate()
+	nextUp02.texture = (nu02.get_node("Shape2D") as Sprite2D).texture
 	nextUp02.cancel_free()
 	
-	nextUp03.texture = (nextUp[2].instantiate() as Sprite2D).texture
+	var nu03 = nextUp[2].instantiate()
+	nextUp03.texture = (nu03.get_node("Shape2D") as Sprite2D).texture
 	nextUp03.cancel_free()
-
-func _input(event):
-	if Input.is_action_pressed("leftclick"):
-		takeNextShape()
