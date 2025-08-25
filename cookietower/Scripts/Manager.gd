@@ -11,7 +11,9 @@ func _ready() -> void:
 
 func bonding():
 #	print(get_tree().get_nodes_in_group("bonding"))	
-	if GameMessenger.obj1.get_position().y > GameMessenger.obj2.get_position().y:
+	print("Collider 1 - ", GameMessenger.obj1.get_instance_id ( ), " | Y : ", GameMessenger.obj1.get_position().y)
+	print("Collider 2 - ", GameMessenger.obj2.get_instance_id ( ), " | Y : ", GameMessenger.obj2.get_position().y)
+	if GameMessenger.obj1.get_position().y < GameMessenger.obj2.get_position().y:
 		GameMessenger.obj1.queue_free()
 		print("obj 1 is higher and should be deleted")
 	else:

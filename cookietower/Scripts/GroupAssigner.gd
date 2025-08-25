@@ -1,10 +1,15 @@
 extends CollisionShape2D
 
+@export var link : RigidBody2D
+
 var collAllowed: bool = true #prevents duplicated collision signals etc 
 
 func _on_rigid_body_2d_body_entered(body: Node) -> void:
+	print("Collider 1 - ", link.get_instance_id ( ), " | Y : ", link.get_position().y)
+	print("Collider 2 - ", body.get_instance_id ( ), " | Y : ", body.get_position().y)
+	
 	if body.is_in_group("bonding") && collAllowed:
-		GameMessenger.obj1 = self
+		GameMessenger.obj1 = link
 		GameMessenger.obj2 = body
 		GameMessenger.bondingCollision.emit()
 		collAllowed = false
