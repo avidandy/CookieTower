@@ -15,11 +15,11 @@ position = Vector2(576, 648)
 shape = SubResource("RectangleShape2D_a5pih")
 
 [node name="Left" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, 235)
+position = Vector2(293, 234)
 shape = SubResource("RectangleShape2D_7hld2")
 
 [node name="Right" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1152, 235)
+position = Vector2(865, 238)
 shape = SubResource("RectangleShape2D_7hld2")
 
 [node name="Background" type="ColorRect" parent="."]
