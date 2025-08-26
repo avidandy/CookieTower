@@ -77,12 +77,6 @@ func _pick_body(mouse_pos: Vector2) -> void:
 	add_child(picked_body)
 	objSpawned = true
 	picked_body.gravity_scale = 0.0
-		
-func _on_body_entered(body):
-	print("Body entered detection area: ", body.name)
-	if body is RigidBody2D:
-		body.set_deferred("freeze", true)
-
 	
 	mouse_body = StaticBody2D.new()
 	mouse_body.global_position = mouse_pos
@@ -103,3 +97,8 @@ func _release_body() -> void:
 		mouse_body.queue_free()
 		mouse_body = null
 	picked_body = null
+
+func _on_body_entered(body):
+	print("Body entered detection area: ", body.name)
+	if body is RigidBody2D:
+		body.set_deferred("freeze", true)
