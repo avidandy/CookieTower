@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dom7dn6abnrxo"]
+
+[ext_resource type="Script" uid="uid://cy7m81ecdh8y3" path="res://Scenes/debug_circle.gd" id="1_d0cgq"]
+
+[node name="DebugCircle" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_d0cgq")

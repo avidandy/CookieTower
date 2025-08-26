@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="CookieTower"
-run/main_scene="uid://d11cihdp5hxl0"
+run/main_scene="uid://bojp56yd10w8"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 
 [autoload]
